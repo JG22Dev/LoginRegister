@@ -17,14 +17,15 @@ $resultado = mysqli_query($conexion,$sql);
         // Iserción correcta
         ?>
 		<script>
-        alert("¡Se insertaron los datos correctamente!");
+        alert("¡Usuario registrado correctamente!");
+        window.location.assign('../index.php')
         </script>
     <?php
 	} else {
 		// Iserción fallida
         ?>
         <script>
-        alert("Error: ¡No se puede insertar la informacion!");
+        alert("Error: ¡No se puede registrar la informacion!");
         </script>
         <?php
         echo " " . $sql . "<br>" . mysqli_error($conexion);

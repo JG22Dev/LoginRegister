@@ -16,7 +16,12 @@ require "conexion.php";
 
         if($num_registros != 0){
             //inicio de sesion exitoso
-            echo "Inicio de sesion exitoso. Bienvenido, " . $usuario . "!";
+            ?>
+            <script>
+                alert("¡Inicio de sesion exitoso!");
+                window.location.assign('../vista/sistema.php')
+            </script>
+            <?php
         } else {
             //credenciales invalidas
             echo "Credenciales invalidas. Por favor, verifica tu Usuario y/o Contraseña"."<br>";
